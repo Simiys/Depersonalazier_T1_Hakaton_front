@@ -10,7 +10,7 @@ import { PostRequest } from "../Fetch/Requests";
 import { SERVER_PATH } from "../constants/PATH_CONSTANTS";
 
 export const MainPage = () => {
-  const [inputTab, setInputTab] = useState(2);
+  const [inputTab, setInputTab] = useState("2");
   const [inputFile, setInputFile] = useState(null);
   const [dbUrl, setDbUrl] = useState("");
   const [status, setStatus] = useState("");
@@ -71,7 +71,6 @@ export const MainPage = () => {
               sx={{
                 display: "flex",
                 justifyContent: "center",
-                transition: "all 0.3s ease-in-out",
               }}
             >
               <Tab label="Database" value="1" minWidth={"50%"} />
@@ -82,7 +81,6 @@ export const MainPage = () => {
           <TabPanel
             value="1"
             sx={{
-              transition: "opacity 0.3s ease-in-out",
               opacity: inputTab === "1" ? 1 : 0,
             }}
           >

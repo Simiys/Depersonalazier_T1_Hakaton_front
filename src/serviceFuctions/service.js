@@ -1,4 +1,5 @@
 export function parseConnectionString(connectionString) {
+  console.log(connectionString);
   const regex =
     /^(?<protocol>[^:]+):\/\/(?<username>[^:]+):(?<password>[^@]+)@(?<host>[^:]+):(?<port>\d+)\/(?<databaseName>.+)$/;
   const match = connectionString.match(regex);
@@ -8,6 +9,7 @@ export function parseConnectionString(connectionString) {
   }
 
   const { groups } = match;
+  console.log(groups);
 
   return {
     protocol: groups.protocol,
